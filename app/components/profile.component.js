@@ -12,8 +12,10 @@ var core_1 = require('@angular/core');
 var github_services_1 = require('../services/github.services');
 var ProfileComponent = (function () {
     function ProfileComponent(_githubService) {
+        var _this = this;
         this._githubService = _githubService;
         this._githubService.getUser().subscribe(function (user) {
+            _this.user = user;
             console.log(user);
         });
     }
@@ -21,7 +23,8 @@ var ProfileComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'profile',
-            templateUrl: 'profile.component.html'
+            templateUrl: 'profile.component.html',
+            styleUrls: ['profile.component.css']
         }), 
         __metadata('design:paramtypes', [github_services_1.GithubService])
     ], ProfileComponent);

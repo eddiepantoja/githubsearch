@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { GithubService } from './services/github.services';
 @Component({
   selector: 'my-app',
-  template: `<profile></profile>`,
+  templateUrl: './app/app.component.html',
+  styleUrls: ['./app/app.component.css'],
   providers: [GithubService]
 })
 export class AppComponent  { name = 'Angular'; }

@@ -1,0 +1,21 @@
+.demo-card-image.mdl-card {
+  width: 350px;
+  height: 350px;
+  background-size: contain;
+  margin: 0 auto;
+}
+.demo-card-image > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.6);
+}
+.demo-card-image__filename {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.container {
+  max-width:1200px;
+  margin: 20px auto;
+}

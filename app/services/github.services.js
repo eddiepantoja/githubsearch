@@ -20,7 +20,7 @@ var GithubService = (function () {
         this.username = 'eddiepantoja';
     }
     GithubService.prototype.getUser = function () {
-        return this._http.get('http://api.github.com/users/' + this.username + '?client_id=' + this.client_id + '&client_secret' + this.client_secret)
+        return this._http.get('http://api.github.com/users/' + this.username + '?client_id=' + this.client_id + '&client_secret=' + this.client_secret)
             .map(function (res) { return res.json(); });
     };
     GithubService = __decorate([

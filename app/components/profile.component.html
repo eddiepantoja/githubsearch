@@ -1,1 +1,58 @@
-PROFILE
+<div *ngIf="user" class="container mdl-color--white mdl-shadow--2dp" >
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--5-col">
+      <div class="demo-card-image mdl-card mdl-shadow--2dp" [ngStyle]="{ 'background-image': 'url(' + user.avatar_url + ')'}">
+        <div class="mdl-card__title mdl-card--expand"></div>
+        <div class="mdl-card__actions">
+          <span class="demo-card-image__filename">{{user.name}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="mdl-cell mdl-cell--7-col">
+      <span class="mdl-chip mdl-chip--contact">
+        <span class="mdl-chip__contact mdl-color--pink mdl-color-text--white">{{user.public_repos}}</span>
+        <span class="mdl-chip__text">Public Repos</span>
+      </span>
+      <span class="mdl-chip mdl-chip--contact">
+        <span class="mdl-chip__contact mdl-color--pink mdl-color-text--white">{{user.public_gists}}</span>
+        <span class="mdl-chip__text">Public Gists</span>
+      </span>
+      <span class="mdl-chip mdl-chip--contact">
+        <span class="mdl-chip__contact mdl-color--pink mdl-color-text--white">{{user.followers}}</span>
+        <span class="mdl-chip__text">Followers</span>
+      </span>
+      <span class="mdl-chip mdl-chip--contact">
+        <span class="mdl-chip__contact mdl-color--pink mdl-color-text--white">{{user.following}}</span>
+        <span class="mdl-chip__text">Following</span>
+      </span>
+      <div>
+        <ul class="demo-list-icon mdl-list">
+          <li class="mdl-list__item">
+            <span class="mdl-list__item-primary-content">
+            <i class="material-icons mdl-list__item-icon">person</i>
+            Username: <strong style="padding-left:10px">{{user.login}}</strong>
+        </span>
+          </li>
+          <li class="mdl-list__item">
+            <span class="mdl-list__item-primary-content">
+            <i class="material-icons mdl-list__item-icon">place</i>
+            Location: <strong style="padding-left:10px">{{user.location}}</strong>
+          </span>
+          </li>
+          <li class="mdl-list__item">
+            <span class="mdl-list__item-primary-content">
+            <i class="material-icons mdl-list__item-icon">email</i>
+            Email: <strong style="padding-left:10px">{{user.email}}</strong>
+          </span>
+          </li>
+          <li class="mdl-list__item">
+            <span class="mdl-list__item-primary-content">
+            <i class="material-icons mdl-list__item-icon">public</i>
+            Blog: <strong style="padding-left:10px">{{user.blog}}</strong>
+          </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

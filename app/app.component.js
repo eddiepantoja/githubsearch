@@ -17,7 +17,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<profile></profile>",
+            templateUrl: './app/app.component.html',
+            styleUrls: ['./app/app.component.css'],
             providers: [github_services_1.GithubService]
         }), 
         __metadata('design:paramtypes', [])
