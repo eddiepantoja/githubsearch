@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { GithubService } from '../services/github.services';
 
 @Component({
@@ -16,6 +16,11 @@ export class ProfileComponent {
 
   constructor(private _githubService: GithubService) {
     this.user = false;
+  }
+
+  ngAfterViewInit() {
+    // Ensure material-design-lite effects are applied
+    componentHandler.upgradeDom();
   }
 
   searchUser(){

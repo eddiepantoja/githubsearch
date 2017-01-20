@@ -15,6 +15,10 @@ var ProfileComponent = (function () {
         this._githubService = _githubService;
         this.user = false;
     }
+    ProfileComponent.prototype.ngAfterViewInit = function () {
+        // Ensure material-design-lite effects are applied
+        componentHandler.upgradeDom();
+    };
     ProfileComponent.prototype.searchUser = function () {
         var _this = this;
         this._githubService.updateUser(this.username);
