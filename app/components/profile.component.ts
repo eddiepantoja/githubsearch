@@ -1,6 +1,8 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { GithubService } from '../services/github.services';
 
+declare var componentHandler: any;
+
 @Component({
   moduleId: module.id,
   selector: 'profile',
