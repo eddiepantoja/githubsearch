@@ -1,3 +1,3 @@
 #Angular2 Github Search Interface
 
-![Alt text](/images/screenshot.jpg?raw=true "screenshot")
+![Alt text](/images/screenshot.png?raw=true "screenshot")
